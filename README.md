@@ -24,24 +24,27 @@ For details about R-CNN please refer to the paper [Faster R-CNN: Towards Real-Ti
 
 2. Build the Cython modules
     ```Shell
-    cd $FRCN_ROOT/lib
+    cd Faster-RCNN_TF/lib
     make
     ```
 
-### Demo
+### Quickstart Demo and validate everything is installed correctly
 
 *After successfully completing [basic installation](#installation-sufficient-for-the-demo)*, you'll be ready to run the demo.
 
-Download model training on PASCAL VOC 2007  [[Google Drive]](https://drive.google.com/open?id=0ByuDEGFYmWsbZ0EzeUlHcGFIVWM) [[Dropbox]](https://www.dropbox.com/s/cfz3blmtmwj6bdh/VGGnet_fast_rcnn_iter_70000.ckpt?dl=0)
+You are going to need to download a pretrained model that was trained on PASCAL VOC 2007 dataset. Download from either of these locations and put into the Faster-RCNN_TF directory [[Google Drive]](https://drive.google.com/open?id=0ByuDEGFYmWsbZ0EzeUlHcGFIVWM) [[Dropbox]](https://www.dropbox.com/s/cfz3blmtmwj6bdh/VGGnet_fast_rcnn_iter_70000.ckpt?dl=0)
 
 To run the demo
 ```Shell
-cd $FRCN_ROOT
-./tools/demo.py --model model_path
-```
-The demo performs detection using a VGG16 network trained for detection on PASCAL VOC 2007.
+cd Faster-RCNN_TF/tools
 
-### Training Model
+python demo.py --model /home/ubuntu/Faster-RCNN_TF/VGGnet_fast_rcnn_iter_70000.ckpt --gpu 0
+
+```
+
+This demo will load the pretrained (PASCAL VOC 2007) VGG network and perform detection on each image in the demo.py list.
+
+### Training Model from scratch for fun
 1. Download the training, validation, test data and VOCdevkit
 
 	```Shell
