@@ -8,7 +8,7 @@ For details about R-CNN please refer to the paper [Faster R-CNN: Towards Real-Ti
 
 1. Requirements for Tensorflow (see: [Tensorflow](https://www.tensorflow.org/))
 
-2. Python packages you might not have: `cython`, `python-opencv`, `easydict`
+2. Python packages need to run this repo: `cython`, `python-opencv`, `easydict`
 
 ### Requirements: hardware
 
