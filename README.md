@@ -42,7 +42,7 @@ python demo.py --model /home/ubuntu/Faster-RCNN_TF/VGGnet_fast_rcnn_iter_70000.c
 
 ```
 
-This demo will load the pretrained (PASCAL VOC 2007) VGG network and perform detection on each image in the demo.py list. demo.py is located in the tools folder from the project root. The gpu flag will target the first GPU on your box.
+The demo.py will load the above pretrained Faster-RCNN_TF network that includes (VGG_ImageNet base and PASCAL 2007 training) and perform detection on each image in the demo.py list. demo.py is located in the tools folder from the project root. The gpu flag will target the first GPU on your box. You can add images into the data folder and run the demo.py against any of your custom photos once you refactor the image list.
 
 ### Training Model from scratch for fun
 1. Download the training, validation, test data and VOCdevkit
